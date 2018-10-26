@@ -7,25 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		11559C0D218251350031E51A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11559C0C218251350031E51A /* AppDelegate.swift */; };
-		11559C0F218251350031E51A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11559C0E218251350031E51A /* ViewController.swift */; };
-		11559C12218251350031E51A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11559C10218251350031E51A /* Main.storyboard */; };
-		11559C14218251360031E51A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11559C13218251360031E51A /* Assets.xcassets */; };
-		11559C17218251360031E51A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11559C15218251360031E51A /* LaunchScreen.storyboard */; };
+		11559C2D218293EA0031E51A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11559C2C218293EA0031E51A /* AppDelegate.swift */; };
+		11559C2F218293EA0031E51A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11559C2E218293EA0031E51A /* ViewController.swift */; };
+		11559C32218293EA0031E51A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11559C30218293EA0031E51A /* Main.storyboard */; };
+		11559C34218293ED0031E51A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11559C33218293ED0031E51A /* Assets.xcassets */; };
+		11559C37218293ED0031E51A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11559C35218293ED0031E51A /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		11559C09218251350031E51A /* iQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		11559C0C218251350031E51A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		11559C0E218251350031E51A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		11559C11218251350031E51A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		11559C13218251360031E51A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		11559C16218251360031E51A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		11559C18218251360031E51A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11559C29218293EA0031E51A /* iquiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iquiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		11559C2C218293EA0031E51A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		11559C2E218293EA0031E51A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		11559C31218293EA0031E51A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		11559C33218293ED0031E51A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		11559C36218293ED0031E51A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		11559C38218293ED0031E51A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		11559C06218251340031E51A /* Frameworks */ = {
+		11559C26218293EA0031E51A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -35,71 +35,71 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		11559C00218251340031E51A = {
+		11559C20218293EA0031E51A = {
 			isa = PBXGroup;
 			children = (
-				11559C0B218251350031E51A /* iQuiz */,
-				11559C0A218251350031E51A /* Products */,
+				11559C2B218293EA0031E51A /* iquiz */,
+				11559C2A218293EA0031E51A /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		11559C0A218251350031E51A /* Products */ = {
+		11559C2A218293EA0031E51A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				11559C09218251350031E51A /* iQuiz.app */,
+				11559C29218293EA0031E51A /* iquiz.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		11559C0B218251350031E51A /* iQuiz */ = {
+		11559C2B218293EA0031E51A /* iquiz */ = {
 			isa = PBXGroup;
 			children = (
-				11559C0C218251350031E51A /* AppDelegate.swift */,
-				11559C0E218251350031E51A /* ViewController.swift */,
-				11559C10218251350031E51A /* Main.storyboard */,
-				11559C13218251360031E51A /* Assets.xcassets */,
-				11559C15218251360031E51A /* LaunchScreen.storyboard */,
-				11559C18218251360031E51A /* Info.plist */,
+				11559C2C218293EA0031E51A /* AppDelegate.swift */,
+				11559C2E218293EA0031E51A /* ViewController.swift */,
+				11559C30218293EA0031E51A /* Main.storyboard */,
+				11559C33218293ED0031E51A /* Assets.xcassets */,
+				11559C35218293ED0031E51A /* LaunchScreen.storyboard */,
+				11559C38218293ED0031E51A /* Info.plist */,
 			);
-			path = iQuiz;
+			path = iquiz;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		11559C08218251340031E51A /* iQuiz */ = {
+		11559C28218293EA0031E51A /* iquiz */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 11559C1B218251360031E51A /* Build configuration list for PBXNativeTarget "iQuiz" */;
+			buildConfigurationList = 11559C3B218293ED0031E51A /* Build configuration list for PBXNativeTarget "iquiz" */;
 			buildPhases = (
-				11559C05218251340031E51A /* Sources */,
-				11559C06218251340031E51A /* Frameworks */,
-				11559C07218251340031E51A /* Resources */,
+				11559C25218293EA0031E51A /* Sources */,
+				11559C26218293EA0031E51A /* Frameworks */,
+				11559C27218293EA0031E51A /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = iQuiz;
-			productName = iQuiz;
-			productReference = 11559C09218251350031E51A /* iQuiz.app */;
+			name = iquiz;
+			productName = iquiz;
+			productReference = 11559C29218293EA0031E51A /* iquiz.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		11559C01218251340031E51A /* Project object */ = {
+		11559C21218293EA0031E51A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1000;
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "Julia Bobrovskiy";
 				TargetAttributes = {
-					11559C08218251340031E51A = {
+					11559C28218293EA0031E51A = {
 						CreatedOnToolsVersion = 10.0;
 					};
 				};
 			};
-			buildConfigurationList = 11559C04218251340031E51A /* Build configuration list for PBXProject "iQuiz" */;
+			buildConfigurationList = 11559C24218293EA0031E51A /* Build configuration list for PBXProject "iquiz" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -107,54 +107,54 @@
 				en,
 				Base,
 			);
-			mainGroup = 11559C00218251340031E51A;
-			productRefGroup = 11559C0A218251350031E51A /* Products */;
+			mainGroup = 11559C20218293EA0031E51A;
+			productRefGroup = 11559C2A218293EA0031E51A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				11559C08218251340031E51A /* iQuiz */,
+				11559C28218293EA0031E51A /* iquiz */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		11559C07218251340031E51A /* Resources */ = {
+		11559C27218293EA0031E51A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11559C17218251360031E51A /* LaunchScreen.storyboard in Resources */,
-				11559C14218251360031E51A /* Assets.xcassets in Resources */,
-				11559C12218251350031E51A /* Main.storyboard in Resources */,
+				11559C37218293ED0031E51A /* LaunchScreen.storyboard in Resources */,
+				11559C34218293ED0031E51A /* Assets.xcassets in Resources */,
+				11559C32218293EA0031E51A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		11559C05218251340031E51A /* Sources */ = {
+		11559C25218293EA0031E51A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11559C0F218251350031E51A /* ViewController.swift in Sources */,
-				11559C0D218251350031E51A /* AppDelegate.swift in Sources */,
+				11559C2F218293EA0031E51A /* ViewController.swift in Sources */,
+				11559C2D218293EA0031E51A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		11559C10218251350031E51A /* Main.storyboard */ = {
+		11559C30218293EA0031E51A /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				11559C11218251350031E51A /* Base */,
+				11559C31218293EA0031E51A /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		11559C15218251360031E51A /* LaunchScreen.storyboard */ = {
+		11559C35218293ED0031E51A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				11559C16218251360031E51A /* Base */,
+				11559C36218293ED0031E51A /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -162,7 +162,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		11559C19218251360031E51A /* Debug */ = {
+		11559C39218293ED0031E51A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -223,7 +223,7 @@
 			};
 			name = Debug;
 		};
-		11559C1A218251360031E51A /* Release */ = {
+		11559C3A218293ED0031E51A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -278,36 +278,34 @@
 			};
 			name = Release;
 		};
-		11559C1C218251360031E51A /* Debug */ = {
+		11559C3C218293ED0031E51A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4LCVCMUP5V;
-				INFOPLIST_FILE = iQuiz/Info.plist;
+				INFOPLIST_FILE = iquiz/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = edu.uw.ischool.iQuiz;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.uw.ischool.iquiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		11559C1D218251360031E51A /* Release */ = {
+		11559C3D218293ED0031E51A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4LCVCMUP5V;
-				INFOPLIST_FILE = iQuiz/Info.plist;
+				INFOPLIST_FILE = iquiz/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = edu.uw.ischool.iQuiz;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.uw.ischool.iquiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -317,25 +315,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		11559C04218251340031E51A /* Build configuration list for PBXProject "iQuiz" */ = {
+		11559C24218293EA0031E51A /* Build configuration list for PBXProject "iquiz" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				11559C19218251360031E51A /* Debug */,
-				11559C1A218251360031E51A /* Release */,
+				11559C39218293ED0031E51A /* Debug */,
+				11559C3A218293ED0031E51A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		11559C1B218251360031E51A /* Build configuration list for PBXNativeTarget "iQuiz" */ = {
+		11559C3B218293ED0031E51A /* Build configuration list for PBXNativeTarget "iquiz" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				11559C1C218251360031E51A /* Debug */,
-				11559C1D218251360031E51A /* Release */,
+				11559C3C218293ED0031E51A /* Debug */,
+				11559C3D218293ED0031E51A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 11559C01218251340031E51A /* Project object */;
+	rootObject = 11559C21218293EA0031E51A /* Project object */;
 }

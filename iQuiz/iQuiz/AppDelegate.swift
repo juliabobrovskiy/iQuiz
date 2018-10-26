@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  iQuiz
+//  iquiz
 //
 //  Created by Julia Bobrovskiy on 10/25/18.
 //  Copyright © 2018 Julia Bobrovskiy. All rights reserved.
