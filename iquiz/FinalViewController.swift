@@ -16,10 +16,11 @@ class FinalViewController: UIViewController {
     @IBOutlet weak var congratsLab: UILabel!
     @IBOutlet weak var scoreLab: UILabel!
     
+    // Displays the final score as well as how the
+    // user did on the quiz
     override func viewDidLoad() {
         super.viewDidLoad()
         if(appdata.score <= 1) {
-            scoreLab.text = "derp"
             congratsLab.text = "Not Quite the Expert!"
         } else if(appdata.score == 2) {
             congratsLab.text = "Almost!"
@@ -28,9 +29,7 @@ class FinalViewController: UIViewController {
         }
         scoreLab.text = String(appdata.score) + "/3"
         appdata.score = 0
-
     }
-    
     
 }
 

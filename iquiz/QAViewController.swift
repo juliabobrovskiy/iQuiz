@@ -27,7 +27,7 @@ class QAViewController: UIViewController {
         }
     }
     
-    
+    // Tracks whne submit button is pressed
     @IBAction func subPressed(_ sender: UIButton) {
         appdata.subCount += 1
         if(appdata.subCount < 3) {
@@ -35,6 +35,8 @@ class QAViewController: UIViewController {
         }
     }
     
+    // Displays questions and answers depending on what the user clicks on
+    // in the table view
     func newQuestion() {
         var questionAns : [String] = []
         
@@ -103,34 +105,34 @@ class QAViewController: UIViewController {
             button.setTitleColor(color, for: .normal)
             button.titleLabel?.font = UIFont.systemFont(ofSize: 15.0)
         }
-            switch sender.tag {
-            case 1:
-                sender.backgroundColor = UIColor.lightGray
-                sender.setTitleColor(UIColor.white, for: .normal)
-                sender.titleLabel?.font = UIFont.boldSystemFont(ofSize: 19)
-                prevChosenCase = 1
-                break
-            case 2:
-                sender.backgroundColor = UIColor.lightGray
-                sender.setTitleColor(UIColor.white, for: .normal)
-                sender.titleLabel?.font = UIFont.boldSystemFont(ofSize: 19)
-                prevChosenCase = 2
-                break
-            case 3:
-                sender.backgroundColor = UIColor.lightGray
-                sender.setTitleColor(UIColor.white, for: .normal)
-                sender.titleLabel?.font = UIFont.boldSystemFont(ofSize: 19)
-                prevChosenCase = 3
-                break
-            case 4:
-                sender.backgroundColor = UIColor.lightGray
-                sender.setTitleColor(UIColor.white, for: .normal)
-                sender.titleLabel?.font = UIFont.boldSystemFont(ofSize: 19)
-                prevChosenCase = 4
-                break
-            default:
-                print("Default Case")
-            }
+        switch sender.tag {
+        case 1:
+            sender.backgroundColor = UIColor.lightGray
+            sender.setTitleColor(UIColor.white, for: .normal)
+            sender.titleLabel?.font = UIFont.boldSystemFont(ofSize: 19)
+            prevChosenCase = 1
+            break
+        case 2:
+            sender.backgroundColor = UIColor.lightGray
+            sender.setTitleColor(UIColor.white, for: .normal)
+            sender.titleLabel?.font = UIFont.boldSystemFont(ofSize: 19)
+            prevChosenCase = 2
+            break
+        case 3:
+            sender.backgroundColor = UIColor.lightGray
+            sender.setTitleColor(UIColor.white, for: .normal)
+            sender.titleLabel?.font = UIFont.boldSystemFont(ofSize: 19)
+            prevChosenCase = 3
+            break
+        case 4:
+            sender.backgroundColor = UIColor.lightGray
+            sender.setTitleColor(UIColor.white, for: .normal)
+            sender.titleLabel?.font = UIFont.boldSystemFont(ofSize: 19)
+            prevChosenCase = 4
+            break
+        default:
+            print("Default Case")
+        }
     }
 
 }

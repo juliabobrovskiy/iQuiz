@@ -41,20 +41,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.imageView?.image = appdata.images[indexPath.row]
         return (cell)
     }
-    
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tblView.dequeueReusableCell(withIdentifier: "cell") as! QuizCell
-//        cell.lblTitle.text = appdata.titles[indexPath.row]
-//        cell.lblDescr.text = appdata.descr[indexPath.row]
-//        return cell
-//    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         tblView.dataSource = self
         tblView.delegate = self
         appdata.subCount = 0
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
 }

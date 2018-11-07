@@ -27,6 +27,7 @@ class AnswerViewController: UIViewController {
         popAns()
     }
     
+    // Segues to the final screen when the user wants to see their results
     @IBAction func makeSegFinal(_ sender: UIButton) {
         if(sender.titleLabel!.text == "See Results") {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -35,6 +36,8 @@ class AnswerViewController: UIViewController {
         }
     }
     
+    // Displays whether or not the user got the answer right or not
+    // as well as the correct answer
     func popAns() {
         if appdata.rightAnswers.contains(appdata.chosenAns) {
             appdata.score += 1
