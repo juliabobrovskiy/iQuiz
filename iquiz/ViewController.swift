@@ -9,12 +9,19 @@
 import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    let categories = ["Rap Artists", "Wine Tasting", "Harry Potter"]
-    let desc = ["Find out which famous rapper you are!", "What your wine taste says about you.", "Who is your spirit wizard?"]
-    let images : [UIImage] = [UIImage(named: "microphone")!, UIImage(named: "wine")!, UIImage(named: "wand3")!]
+    var appdata = AppData.shared
+    @IBOutlet weak var tblView: UITableView!
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        appdata.topicIdx = indexPath.row
+        appdata.score = 0
+        performSegue(withIdentifier: "goToQuestion", sender: self)
+    }
+    
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return(categories.count)
+        return appdata.categories.count
     }
     
     // Performs Alert
@@ -29,17 +36,26 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCell.CellStyle.subtitle, reuseIdentifier: "cell")
-        cell.textLabel?.text = categories[indexPath.row]
-        cell.detailTextLabel?.text = desc[indexPath.row]
-        cell.imageView?.image = images[indexPath.row]
+        cell.textLabel?.text = appdata.categories[indexPath.row]
+        cell.detailTextLabel?.text = appdata.desc[indexPath.row]
+        cell.imageView?.image = appdata.images[indexPath.row]
         return (cell)
     }
+    
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell = tblView.dequeueReusableCell(withIdentifier: "cell") as! QuizCell
+//        cell.lblTitle.text = appdata.titles[indexPath.row]
+//        cell.lblDescr.text = appdata.descr[indexPath.row]
+//        return cell
+//    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tblView.dataSource = self
+        tblView.delegate = self
+        appdata.subCount = 0
         // Do any additional setup after loading the view, typically from a nib.
     }
-
 
 }
 
