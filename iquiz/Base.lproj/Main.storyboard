@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -40,7 +40,7 @@
                                 <items>
                                     <barButtonItem title="Settings" id="sAy-70-2lJ">
                                         <connections>
-                                            <action selector="settingsPush:" destination="BYZ-38-t0r" id="ix1-6e-l0d"/>
+                                            <action selector="settingsPush:" destination="BYZ-38-t0r" id="9yi-sI-BLF"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -65,7 +65,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="131.78410794602701"/>
+            <point key="canvasLocation" x="-199" y="118"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="L9v-Y1-m6f">
@@ -103,7 +103,8 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="nKk-i3-ntC"/>
                                         </constraints>
-                                        <state key="normal" title="Answer derp derp"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="hey there what is up my dude derpie"/>
                                         <connections>
                                             <action selector="ansSelected:" destination="X5O-Ia-fln" eventType="touchUpInside" id="k9R-oP-b1E"/>
                                         </connections>
@@ -114,6 +115,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="SEY-X6-XkU"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="Answer derp derp"/>
                                         <connections>
                                             <action selector="ansSelected:" destination="X5O-Ia-fln" eventType="touchUpInside" id="ZLa-iQ-8Aw"/>
@@ -125,6 +127,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="aUY-sx-voq"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="Eating poison berries"/>
                                         <connections>
                                             <action selector="ansSelected:" destination="X5O-Ia-fln" eventType="touchUpInside" id="Jpm-ct-byg"/>
@@ -136,6 +139,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="8UW-7D-CWH"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="Answer derp derp"/>
                                         <connections>
                                             <action selector="ansSelected:" destination="X5O-Ia-fln" eventType="touchUpInside" id="Vmf-9T-f61"/>
@@ -143,9 +147,10 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TF5-kz-569">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TF5-kz-569">
                                 <rect key="frame" x="257" y="783" width="117" height="39"/>
                                 <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" label="submitAns"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Submit"/>
                                 <connections>
@@ -179,6 +184,7 @@
                         <outlet property="ans3" destination="V6r-1V-ScF" id="gfb-gh-yEg"/>
                         <outlet property="ans4" destination="5Ul-lQ-ktD" id="SOe-rD-Hyu"/>
                         <outlet property="questionLab" destination="utq-dK-MLi" id="o6L-qA-7fJ"/>
+                        <outlet property="submitButton" destination="TF5-kz-569" id="nGf-eO-W1P"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vVW-r1-hiJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -201,7 +207,7 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="LjM-aK-taB"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Right Answer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rrf-vk-Eao">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Right Answer" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rrf-vk-Eao">
                                 <rect key="frame" x="64" y="389" width="287" height="145"/>
                                 <color key="backgroundColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -343,7 +349,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="3XD-0R-9jG"/>
         <segue reference="Zkr-4t-7Q8"/>
-        <segue reference="LjM-aK-taB"/>
+        <segue reference="kBU-Kv-5bf"/>
     </inferredMetricsTieBreakers>
 </document>

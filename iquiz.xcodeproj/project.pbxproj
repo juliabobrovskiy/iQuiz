@@ -12,6 +12,8 @@
 		11559C32218293EA0031E51A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11559C30218293EA0031E51A /* Main.storyboard */; };
 		11559C34218293ED0031E51A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11559C33218293ED0031E51A /* Assets.xcassets */; };
 		11559C37218293ED0031E51A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11559C35218293ED0031E51A /* LaunchScreen.storyboard */; };
+		11A063582198BD6800FD3CC7 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A063572198BD6800FD3CC7 /* Category.swift */; };
+		11A0635A2198E1B300FD3CC7 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A063592198E1B300FD3CC7 /* Question.swift */; };
 		11B3F12B2192722B00FB454E /* Qcell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B3F12A2192722B00FB454E /* Qcell.swift */; };
 		11B3F12F21928D0600FB454E /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B3F12E21928D0600FB454E /* AnswerViewController.swift */; };
 		11B3F13121929BF800FB454E /* FinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B3F13021929BF800FB454E /* FinalViewController.swift */; };
@@ -27,6 +29,8 @@
 		11559C33218293ED0031E51A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11559C36218293ED0031E51A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		11559C38218293ED0031E51A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11A063572198BD6800FD3CC7 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		11A063592198E1B300FD3CC7 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		11B3F12A2192722B00FB454E /* Qcell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Qcell.swift; sourceTree = "<group>"; };
 		11B3F12E21928D0600FB454E /* AnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
 		11B3F13021929BF800FB454E /* FinalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +75,8 @@
 				11B3F12A2192722B00FB454E /* Qcell.swift */,
 				11B3F12E21928D0600FB454E /* AnswerViewController.swift */,
 				11EF93AE2192476C001AD2F7 /* QAViewController.swift */,
+				11A063572198BD6800FD3CC7 /* Category.swift */,
+				11A063592198E1B300FD3CC7 /* Question.swift */,
 				11EF93AC219239CF001AD2F7 /* AppData.swift */,
 				11559C33218293ED0031E51A /* Assets.xcassets */,
 				11559C35218293ED0031E51A /* LaunchScreen.storyboard */,
@@ -153,10 +159,12 @@
 				11B3F12F21928D0600FB454E /* AnswerViewController.swift in Sources */,
 				11B3F13121929BF800FB454E /* FinalViewController.swift in Sources */,
 				11559C2F218293EA0031E51A /* ViewController.swift in Sources */,
+				11A0635A2198E1B300FD3CC7 /* Question.swift in Sources */,
 				11559C2D218293EA0031E51A /* AppDelegate.swift in Sources */,
 				11EF93AF2192476C001AD2F7 /* QAViewController.swift in Sources */,
 				11EF93AD219239CF001AD2F7 /* AppData.swift in Sources */,
 				11B3F12B2192722B00FB454E /* Qcell.swift in Sources */,
+				11A063582198BD6800FD3CC7 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +311,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4LCVCMUP5V;
 				INFOPLIST_FILE = iquiz/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -320,6 +329,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4LCVCMUP5V;
 				INFOPLIST_FILE = iquiz/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

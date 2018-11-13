@@ -17,12 +17,12 @@ class QAViewController: UIViewController {
     @IBOutlet weak var ans2: UIButton!
     @IBOutlet weak var ans3: UIButton!
     @IBOutlet weak var ans4: UIButton!
-    @IBOutlet weak var submitBtn: UIButton!
+    @IBOutlet weak var submitButton: UIButton!
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        if(appdata.subCount < 3) {
+        let maxQuestions = appdata.categories[appdata.topicIdx].allQuestionData.count
+        if(appdata.subCount < maxQuestions) {
             newQuestion()
         }
     }
@@ -30,74 +30,40 @@ class QAViewController: UIViewController {
     // Tracks whne submit button is pressed
     @IBAction func subPressed(_ sender: UIButton) {
         appdata.subCount += 1
-        if(appdata.subCount < 3) {
+        let maxQuestions = appdata.categories[appdata.topicIdx].allQuestionData.count
+        if(appdata.subCount < maxQuestions) {
             newQuestion()
         }
+        
     }
     
     // Displays questions and answers depending on what the user clicks on
     // in the table view
     func newQuestion() {
-        var questionAns : [String] = []
+        appdata.chosenAns = ""
+        let category = appdata.categories[appdata.topicIdx]
+        let questionIndex = appdata.questionNum
+        questionLab.text = category.allQuestionData[questionIndex].question
+        appdata.currentQ = category.allQuestionData[questionIndex].question
+        let currentAnswers = category.allQuestionData[questionIndex].answers
         
-        switch appdata.topicIdx {
-        case 0:
-            questionLab.text = appdata.rapQuestions[appdata.subCount]
-            appdata.currentQ = appdata.rapQuestions[appdata.subCount]
-            if(appdata.subCount == 0) {
-                questionAns = appdata.rapAnswers1
-                appdata.correctIndex = 0
-            }else if (appdata.subCount == 1) {
-                questionAns = appdata.rapAnswers2
-                appdata.correctIndex = 1
-            } else {
-                questionAns = appdata.rapAnswers3
-                appdata.correctIndex = 2
-            }
-            ans1.setTitle(questionAns[0], for: .normal)
-            ans2.setTitle(questionAns[1], for: .normal)
-            ans3.setTitle(questionAns[2], for: .normal)
-            ans4.setTitle(questionAns[3], for: .normal)
-        case 1:
-            questionLab.text = appdata.karQuestions[appdata.subCount]
-            appdata.currentQ = appdata.karQuestions[appdata.subCount]
-            if(appdata.subCount == 0) {
-                questionAns = appdata.karAnswers1
-                appdata.correctIndex = 3
-            }else if (appdata.subCount == 1) {
-                questionAns = appdata.karAnswers2
-                appdata.correctIndex = 4
-            } else {
-                questionAns = appdata.karAnswers3
-                appdata.correctIndex = 5
-            }
-            ans1.setTitle(questionAns[0], for: .normal)
-            ans2.setTitle(questionAns[1], for: .normal)
-            ans3.setTitle(questionAns[2], for: .normal)
-            ans4.setTitle(questionAns[3], for: .normal)
-        default:
-            questionLab.text = appdata.hungQuestions[appdata.subCount]
-            appdata.currentQ = appdata.hungQuestions[appdata.subCount]
-            if(appdata.subCount == 0) {
-                questionAns = appdata.hungAnswers1
-                appdata.correctIndex = 6
-            }else if (appdata.subCount == 1) {
-                questionAns = appdata.hungAnswers2
-                appdata.correctIndex = 7
-            } else {
-                questionAns = appdata.hungAnswers3
-                appdata.correctIndex = 8
-            }
-            ans1.setTitle(questionAns[0], for: .normal)
-            ans2.setTitle(questionAns[1], for: .normal)
-            ans3.setTitle(questionAns[2], for: .normal)
-            ans4.setTitle(questionAns[3], for: .normal)
-        }
+        ans1.setTitle(currentAnswers[0], for: .normal)
+        ans1.titleLabel?.adjustsFontSizeToFitWidth = true
+        ans2.setTitle(currentAnswers[1], for: .normal)
+        ans2.titleLabel?.adjustsFontSizeToFitWidth = true
+        ans3.setTitle(currentAnswers[2], for: .normal)
+        ans3.titleLabel?.adjustsFontSizeToFitWidth = true
+        ans4.setTitle(currentAnswers[3], for: .normal)
+        ans4.titleLabel?.adjustsFontSizeToFitWidth = true
+        
     }
-    
+  
     // Selecting and deselcting the chosen values by the user
     @IBAction func ansSelected(_ sender: UIButton) {
         appdata.chosenAns = sender.currentTitle!
+        appdata.selectionMade = true
+        submitButton.isEnabled = true
+        
         if(prevChosenCase != -1) {
             let button = self.view.viewWithTag(prevChosenCase) as! UIButton
             let color = UIColor(red: 0/255, green: 122/255, blue: 255/255, alpha: 1)
@@ -110,24 +76,28 @@ class QAViewController: UIViewController {
             sender.backgroundColor = UIColor.lightGray
             sender.setTitleColor(UIColor.white, for: .normal)
             sender.titleLabel?.font = UIFont.boldSystemFont(ofSize: 19)
+            sender.titleLabel?.adjustsFontSizeToFitWidth = true
             prevChosenCase = 1
             break
         case 2:
             sender.backgroundColor = UIColor.lightGray
             sender.setTitleColor(UIColor.white, for: .normal)
             sender.titleLabel?.font = UIFont.boldSystemFont(ofSize: 19)
+            sender.titleLabel?.adjustsFontSizeToFitWidth = true
             prevChosenCase = 2
             break
         case 3:
             sender.backgroundColor = UIColor.lightGray
             sender.setTitleColor(UIColor.white, for: .normal)
             sender.titleLabel?.font = UIFont.boldSystemFont(ofSize: 19)
+            sender.titleLabel?.adjustsFontSizeToFitWidth = true
             prevChosenCase = 3
             break
         case 4:
             sender.backgroundColor = UIColor.lightGray
             sender.setTitleColor(UIColor.white, for: .normal)
             sender.titleLabel?.font = UIFont.boldSystemFont(ofSize: 19)
+            sender.titleLabel?.adjustsFontSizeToFitWidth = true
             prevChosenCase = 4
             break
         default:

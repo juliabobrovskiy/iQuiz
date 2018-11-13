@@ -27,7 +27,7 @@ class FinalViewController: UIViewController {
         }else{
            congratsLab.text = "Youre an Expert!"
         }
-        scoreLab.text = String(appdata.score) + "/3"
+        scoreLab.text = String(appdata.score) + "/" + String(appdata.categories[appdata.topicIdx].allQuestionData.count)
         appdata.score = 0
     }
     

@@ -21,7 +21,8 @@ class AnswerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         questionLab.text = appdata.currentQ
-        if(appdata.correctIndex == 2 || appdata.correctIndex == 5 || appdata.correctIndex == 8) {
+        let maxQuestions = appdata.categories[appdata.topicIdx].allQuestionData.count
+        if(appdata.subCount >= maxQuestions - 1) {
             nextBtn.setTitle("See Results", for: .normal)
         }
         popAns()
@@ -39,7 +40,10 @@ class AnswerViewController: UIViewController {
     // Displays whether or not the user got the answer right or not
     // as well as the correct answer
     func popAns() {
-        if appdata.rightAnswers.contains(appdata.chosenAns) {
+        let category = appdata.categories[appdata.topicIdx]
+        let questionIndex = appdata.questionNum
+        let currentQ = category.allQuestionData[questionIndex]
+        if (appdata.chosenAns == currentQ.answers[currentQ.answerIndex - 1]) {
             appdata.score += 1
             wrongRightLab.text = "You got it dude!"
             let color = UIColor(red:0.05, green:0.56, blue:0.04, alpha:1.0)
@@ -50,8 +54,8 @@ class AnswerViewController: UIViewController {
             wrongRightLab.textColor = UIColor.red
             wrongRightLab.font = UIFont.boldSystemFont(ofSize: 19)
         }
-        rightAnsLab.text = appdata.rightAnswers[appdata.correctIndex]
-        
-        
+        rightAnsLab.text = currentQ.answers[currentQ.answerIndex - 1]
+               // moving on to next question
+        appdata.questionNum += 1
     }
 }
