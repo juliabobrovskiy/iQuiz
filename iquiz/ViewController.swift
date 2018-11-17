@@ -12,7 +12,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var appdata = AppData.shared
     var jsonTextField: UITextField?
     @IBOutlet weak var tblView: UITableView!
-    
+    var refresh: UIRefreshControl!
+    var wifiError = NSURLConnection()
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         appdata.topicIdx = indexPath.row
         appdata.score = 0
@@ -55,60 +56,85 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.textLabel?.text = appdata.categories[indexPath.row].title
         cell.detailTextLabel?.text = appdata.categories[indexPath.row].desc
         cell.imageView?.image = appdata.images[indexPath.row]
+        appdata.scoreCollection[appdata.categories[indexPath.row].title] = []
+        // adds category to score collector
+        
+        // Changes sell color based off of user settings.
+        if (appdata.background_setting == true) {
+            cell.backgroundColor = UIColor.black
+            cell.textLabel?.textColor = UIColor.white
+            cell.detailTextLabel?.textColor = UIColor.white
+        } else {
+            cell.backgroundColor = UIColor.white
+            cell.textLabel?.textColor = UIColor.black
+            cell.detailTextLabel?.textColor = UIColor.black
+            
+        }
         return (cell)
     }
     
-    // Function accepts a pathway to a json file and then stores it in data
+    
+     //Function accepts a pathway to a json file and then stores it in data
     func getJsonData(url: String) {
-        var data : Data? = nil
-        
+
         do {
             // Getting data from json URL when there is connection
-            data = try Data(contentsOf: URL(string: url)!, options: .mappedIfSafe)
-            do {
-                // Writing the data to a file
-                try data!.write(to: URL(fileURLWithPath: "/tmp/jsonData.txt"))
-            } catch {
-                print(error)
-            }
+            appdata.data = try Data(contentsOf: URL(string: url)!, options: .mappedIfSafe)
+            
+        } catch let Error as NSError where Error.code == NSURLErrorNotConnectedToInternet {
+            let alert = UIAlertController(title: "Error", message: "No Wifi", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         } catch {
-            // There is no wifi
-            let alert = UIAlertController(title: "Error", message: "Failed to Download", preferredStyle: UIAlertController.Style.alert)
+            let alert = UIAlertController(title: "Error", message: "Couldn't Load Quiz", preferredStyle: UIAlertController.Style.alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
             
-            do {
-                // Retrieve data from file path that already exists
-                data = try Data(contentsOf: URL(fileURLWithPath: "/tmp/jsonData.txt"), options: .mappedIfSafe)
-            } catch {
-                let alert = UIAlertController(title: "Error", message: "No Wifi", preferredStyle: UIAlertController.Style.alert)
-                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-                self.present(alert, animated: true, completion: nil)
-            }
         }
         do {
-            if let data = data {
+            if let data = appdata.data {
                 let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
                 if let jsonResult = jsonResult as? [Dictionary<String, AnyObject>] {
                     for categoryDict in jsonResult {
                         let category =  Category(quizData: categoryDict)
                         appdata.categories.append(category)
                     }
+                } else {
+                    // Alert user that the Json data they submitted was not the correct format
+                    let alert = UIAlertController(title: "Error", message: "JSON not recieved in correct format", preferredStyle: UIAlertController.Style.alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
                 }
             }
         } catch {
             print(error)
         }
-        
+
     }
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        UserDefaults.standard.register(defaults: [String : Any]())
+        // changes background color depending on user settings
+        if (appdata.background_setting == true) {
+            tblView.backgroundColor = UIColor.black
+        } else {
+            tblView.backgroundColor = UIColor.white
+        }
+        
+        // Refresh statements
+        refresh = UIRefreshControl()
+        tblView.addSubview(refresh)
+        refresh.attributedTitle = NSAttributedString(string: "Pull to Refresh")
+        refresh.tintColor = UIColor(red: 0/255, green: 122/255, blue: 255/255, alpha: 1)
+        refresh.addTarget(self, action: #selector(activateRefresh), for: .valueChanged)
+        
+
         appdata.categories = []
         
         // default app data
         if(appdata.pathToJson.isEmpty){
-            //appdata.pathToJson = "file:///Users/juliabobrovskiy/Downloads/paps.json"
             appdata.pathToJson = "http://tednewardsandbox.site44.com/questions.json"
         }
         getJsonData(url: appdata.pathToJson)
@@ -116,6 +142,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tblView.delegate = self
         appdata.subCount = 0
 
+    }
+
+    @objc func activateRefresh() {
+        tblView.reloadData()
+        refresh.endRefreshing()
     }
 
 }

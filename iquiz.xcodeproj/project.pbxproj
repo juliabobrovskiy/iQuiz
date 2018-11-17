@@ -19,6 +19,8 @@
 		11B3F13121929BF800FB454E /* FinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B3F13021929BF800FB454E /* FinalViewController.swift */; };
 		11EF93AD219239CF001AD2F7 /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EF93AC219239CF001AD2F7 /* AppData.swift */; };
 		11EF93AF2192476C001AD2F7 /* QAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EF93AE2192476C001AD2F7 /* QAViewController.swift */; };
+		11FFD295219E0F2300366355 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 11FFD294219E0F2300366355 /* Settings.bundle */; };
+		11FFD299219E473A00366355 /* ErrorExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FFD298219E473A00366355 /* ErrorExtention.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		11B3F13021929BF800FB454E /* FinalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalViewController.swift; sourceTree = "<group>"; };
 		11EF93AC219239CF001AD2F7 /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
 		11EF93AE2192476C001AD2F7 /* QAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QAViewController.swift; sourceTree = "<group>"; };
+		11FFD294219E0F2300366355 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		11FFD298219E473A00366355 /* ErrorExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorExtention.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,7 @@
 		11559C20218293EA0031E51A = {
 			isa = PBXGroup;
 			children = (
+				11FFD294219E0F2300366355 /* Settings.bundle */,
 				11559C2B218293EA0031E51A /* iquiz */,
 				11559C2A218293EA0031E51A /* Products */,
 			);
@@ -81,6 +86,7 @@
 				11559C33218293ED0031E51A /* Assets.xcassets */,
 				11559C35218293ED0031E51A /* LaunchScreen.storyboard */,
 				11559C38218293ED0031E51A /* Info.plist */,
+				11FFD298219E473A00366355 /* ErrorExtention.swift */,
 			);
 			path = iquiz;
 			sourceTree = "<group>";
@@ -143,6 +149,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11FFD295219E0F2300366355 /* Settings.bundle in Resources */,
 				11559C37218293ED0031E51A /* LaunchScreen.storyboard in Resources */,
 				11559C34218293ED0031E51A /* Assets.xcassets in Resources */,
 				11559C32218293EA0031E51A /* Main.storyboard in Resources */,
@@ -165,6 +172,7 @@
 				11EF93AD219239CF001AD2F7 /* AppData.swift in Sources */,
 				11B3F12B2192722B00FB454E /* Qcell.swift in Sources */,
 				11A063582198BD6800FD3CC7 /* Category.swift in Sources */,
+				11FFD299219E473A00366355 /* ErrorExtention.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

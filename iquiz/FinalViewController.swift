@@ -20,16 +20,18 @@ class FinalViewController: UIViewController {
     // user did on the quiz
     override func viewDidLoad() {
         super.viewDidLoad()
-        if(appdata.score <= 1) {
+        let totalPossible = appdata.categories[appdata.topicIdx].allQuestionData.count
+        let yourPercent = Double(appdata.score) / Double(totalPossible)
+        if(yourPercent <= 0.2) {
             congratsLab.text = "Not Quite the Expert!"
-        } else if(appdata.score == 2) {
+        } else if(yourPercent <= 0.8 && yourPercent >= 0.3) {
             congratsLab.text = "Almost!"
         }else{
            congratsLab.text = "Youre an Expert!"
         }
-        scoreLab.text = String(appdata.score) + "/" + String(appdata.categories[appdata.topicIdx].allQuestionData.count)
+        scoreLab.text = String(appdata.score) + "/" + String(totalPossible)
+        
         appdata.score = 0
     }
-    
 }
 
