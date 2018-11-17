@@ -55,7 +55,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cell = UITableViewCell(style: UITableViewCell.CellStyle.subtitle, reuseIdentifier: "cell")
         cell.textLabel?.text = appdata.categories[indexPath.row].title
         cell.detailTextLabel?.text = appdata.categories[indexPath.row].desc
-        cell.imageView?.image = appdata.images[indexPath.row]
+        if(indexPath.row > 2) {
+            cell.imageView?.image = appdata.images[0]
+        } else {
+            cell.imageView?.image = appdata.images[indexPath.row]
+        }
         appdata.scoreCollection[appdata.categories[indexPath.row].title] = []
         // adds category to score collector
         

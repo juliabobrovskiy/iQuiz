@@ -22,9 +22,10 @@ class FinalViewController: UIViewController {
         super.viewDidLoad()
         let totalPossible = appdata.categories[appdata.topicIdx].allQuestionData.count
         let yourPercent = Double(appdata.score) / Double(totalPossible)
+        print(yourPercent)
         if(yourPercent <= 0.2) {
             congratsLab.text = "Not Quite the Expert!"
-        } else if(yourPercent <= 0.8 && yourPercent >= 0.3) {
+        } else if(yourPercent <= 0.8 && yourPercent > 0.2) {
             congratsLab.text = "Almost!"
         }else{
            congratsLab.text = "Youre an Expert!"
